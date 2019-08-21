@@ -5,11 +5,49 @@ anime({
 
 anime({
     targets: '.squareAnimation',
-    backgroundColor: '#FFF',
-    borderRadius: ['0%', '50%'],
-    easing: 'easeInOutQuad',
-    direction:'alternate',
+    easing: 'easeInOutSine',
+    translateX: [
+      {
+        duration: 1000,
+        value: '+=100px',
+      },
+      {
+        duration:1000,
+        value:'+=0'  
+      },
+      {
+        duration:1000,
+        value:'-=100px'
+      },
+      {
+        duration:1000,
+        value:'+=0'
+      }
+    ],
+    translateY: [
+      {
+        duration: 1000,
+        value: '+=0',
+      },
+      {
+          duration:1000,
+          value:'+=100px'
+      },
+      {
+        duration:1000,
+        value:'+=0'
+      },
+      {
+        duration:1000,
+        value:'-=100px'
+      }
+    ],
     loop:true
+    // backgroundColor: '#FFF',
+    // borderRadius: ['0%', '50%'],
+    // easing: 'easeInOutQuad',
+    // direction:'alternate',
+    // loop:true
 });
 
 let squares = document.querySelectorAll('.squares')
